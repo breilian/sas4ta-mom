@@ -1,6 +1,8 @@
 let amqp = require('amqplib/callback_api');
 
-amqp.connect('amqps://zqjdagji:FzLnkKffmRAZHSwC7Ec1HlM1cojTupVw@cow.rmq2.cloudamqp.com/zqjdagji', function(error0, connection) {
+let args = process.argv.slice(2)[0];
+
+amqp.connect(url, function(error0, connection) {
     if (error0) {
         throw error0;
     }
